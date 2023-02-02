@@ -7,7 +7,12 @@ export default function App() {
   const [metric, setMetric] = useState('Hours');
   const [totalMetric, setTotalMetric] = useState('10');
 
-  function Tweet(type, title, body) {
+  function Tweet() {
+
+    var type='🧵 Thread'
+    var title="xyz lol"
+    var body="Yay"
+
     return (
       <>
         <div className="w-1/2 p-4">
@@ -81,7 +86,7 @@ export default function App() {
 
       <div className="container mx-auto mt-2">
         <div className="flex flex-wrap">
-          <Tweet type={'🧵 Thread'} title="xyz lol" body="Yay" />
+          <Tweet  />
 
           <div className="w-1/2 p-4">
             <div className="bg-white p-4 rounded-lg shadow-lg">
