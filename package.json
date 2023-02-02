@@ -16,5 +16,7 @@
   },
   "devDependencies": {
     "react-scripts": "latest"
-  }
+  },
+
+  "jsxFragmentFactory": ""
 }
