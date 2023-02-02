@@ -7,12 +7,32 @@ export default function App() {
   const [metric, setMetric] = useState('Hours');
   const [totalMetric, setTotalMetric] = useState('10');
 
+  function Tweet(type, title, body) {
+    return (
+      <>
+        <div className="w-1/2 p-4">
+          <div className="bg-white p-4 rounded-lg shadow-lg">
+            <h3 className="text-lg font-medium mb-2">{type}</h3>
+            <h2 className="text-lg font-medium mb-4">{title}</h2>
+
+            <p className="text-gray-600 mb-4">{body}</p>
+          </div>
+        </div>
+      </>
+    );
+  }
+
   return (
     <>
       <nav class="bg-white p-4 shadow-lg">
         <div class="container mx-auto flex items-center justify-center">
           <div class="ml-4">
-            <h1 class="rounded-lg py-2 px-4 font-medium text-blue-500 hover:text-blue-700" href="#">Pricing</h1>
+            <h1
+              class="rounded-lg py-2 px-4 font-medium text-blue-500 hover:text-blue-700"
+              href="#"
+            >
+              Pricing
+            </h1>
           </div>
         </div>
       </nav>
@@ -61,6 +81,8 @@ export default function App() {
 
       <div className="container mx-auto mt-2">
         <div className="flex flex-wrap">
+          <Tweet type={'🧵 Thread'} title="xyz lol" body="Yay" />
+
           <div className="w-1/2 p-4">
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <h3 className="text-lg font-medium mb-2">🧵 Thread</h3>
@@ -68,18 +90,8 @@ export default function App() {
                 How I {goal} in {totalMetric} {metric}.
               </h2>
               <p className="text-gray-600 mb-4">
-                I {goal} in 10 days using programming. This is how:
-              </p>
-            </div>
-          </div>
-          <div className="w-1/2 p-4">
-            <div className="bg-white p-4 rounded-lg shadow-lg">
-              <h3 className="text-lg font-medium mb-2">🧵 Thread</h3>
-              <h2 className="text-lg font-medium mb-4">
-                How I {goal} in {totalMetric} {metric}.
-              </h2>
-              <p className="text-gray-600 mb-4">
-                This is guide teaches you everything until you {goal} in {totalMetric} {metric}.
+                This is guide teaches you everything until you {goal} in{' '}
+                {totalMetric} {metric}.
               </p>
             </div>
           </div>
